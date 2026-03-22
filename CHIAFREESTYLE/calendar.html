@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calendar — Chia Freestyle</title>
+  <meta name="description" content="View upcoming yoga classes, calisthenics sessions, retreats, and events with Chia Freestyle.">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .cal-intro {
+      background: var(--dark-2);
+      padding: clamp(2rem, 4vw, 4rem) 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .cal-types {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .cal-type {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      letter-spacing: 0.15em;
+      color: var(--sand);
+    }
+    .cal-type__dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .cal-embed-section {
+      padding: clamp(3rem, 5vw, 6rem) 0;
+    }
+    .cal-note {
+      margin-top: 2rem;
+      padding: 1.25rem 1.75rem;
+      background: var(--dark);
+      border-left: 3px solid var(--coral);
+      border-radius: 0 4px 4px 0;
+    }
+    .cal-note p {
+      color: var(--sand);
+      font-size: 0.9rem;
+    }
+    .cal-note a {
+      color: var(--coral);
+    }
+    .cal-note a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav scrolled">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">CHIA <span>FREESTYLE</span></a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lifestyle.html">Lifestyle</a></li>
+        <li><a href="yoga.html">Yoga</a></li>
+        <li><a href="calisthenics.html">Calisthenics</a></li>
+        <li><a href="retreats.html">Retreats &amp; Programs</a></li>
+        <li><a href="flexibility.html">Flexibility</a></li>
+        <li><a href="reiki.html">Reiki</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+      </ul>
+      <button class="nav__hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav__mobile">
+    <a href="index.html">Home</a>
+    <a href="lifestyle.html">Lifestyle</a>
+    <a href="yoga.html">Yoga</a>
+    <a href="calisthenics.html">Calisthenics</a>
+    <a href="retreats.html">Retreats &amp; Programs</a>
+    <a href="flexibility.html">Flexibility</a>
+    <a href="reiki.html">Reiki</a>
+    <a href="calendar.html">Calendar</a>
+  </div>
+
+  <!-- Spacer for fixed nav -->
+  <div style="height: var(--nav-h);"></div>
+
+  <!-- ===== CAL HEADER ===== -->
+  <div class="cal-intro">
+    <div class="container">
+      <div data-anim="fade-up">
+        <span class="section-label">Schedule</span>
+        <h1 style="font-size: clamp(3rem, 8vw, 7rem);">WHAT'S<br><span class="accent">ON.</span></h1>
+        <p style="color:var(--sand); max-width:600px; margin-top:1rem; font-size:1.05rem;">
+          All upcoming yoga classes, calisthenics sessions, workshops, retreats, and events — live in one place. Tap any event to see details and register.
+        </p>
+        <div class="cal-types">
+          <div class="cal-type"><div class="cal-type__dot" style="background:#e84c3d;"></div>Retreats &amp; Programs</div>
+          <div class="cal-type"><div class="cal-type__dot" style="background:#5b8dee;"></div>Yoga Classes</div>
+          <div class="cal-type"><div class="cal-type__dot" style="background:#2ecc71;"></div>Calisthenics</div>
+          <div class="cal-type"><div class="cal-type__dot" style="background:#f39c12;"></div>Workshops</div>
+          <div class="cal-type"><div class="cal-type__dot" style="background:#9b59b6;"></div>Special Events</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CALENDAR EMBED ===== -->
+  <section class="cal-embed-section">
+    <div class="container">
+      <div class="calendar-wrap" data-anim="fade-up">
+        <iframe
+          src="https://calendar.google.com/calendar/embed?src=1557ecb6924c239bf22c098014cba7ed62f306259c53918015321a3f5aee2d9a%40group.calendar.google.com&ctz=America%2FMexico_City&bgcolor=%230d0d0d&color=%23e84c3d&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=0&showTz=1&mode=MONTH"
+          style="height: min(700px, 80vw);"
+          frameborder="0"
+          scrolling="no"
+          title="Chia Freestyle Schedule"
+          loading="lazy"
+        ></iframe>
+      </div>
+
+      <div class="cal-note" data-anim="fade-up">
+        <p><strong style="color:var(--cream);">To register for any event:</strong> click the event in the calendar above to view details, or <a href="mailto:hello@chiafreestyle.com">email Chia directly</a> to book your spot. Retreats require a deposit to secure your place.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ===== CONTACT CTA ===== -->
+  <section>
+    <div class="container" style="text-align:center;" data-anim="fade-up">
+      <h2 style="margin-bottom:1rem;">QUESTIONS? <span class="accent">LET'S TALK.</span></h2>
+      <p style="color:var(--sand); max-width:500px; margin:0 auto 2.5rem;">Can't find what you're looking for in the calendar? Reach out directly — Chia is happy to arrange private sessions or answer any questions about her programs.</p>
+      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+        <a href="mailto:hello@chiafreestyle.com" class="btn btn--primary">Email Chia</a>
+        <a href="retreats.html" class="btn btn--outline">View Programs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand-name">CHIA <span>FREESTYLE</span></div>
+          <p class="footer__tagline">Bodyboarder, yoga instructor &amp; calisthenics trainer living the freestyle life on the Pacific coast.</p>
+          <div class="footer__socials">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="YouTube">YT</a>
+            <a href="#" aria-label="TikTok">TK</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h5>Navigate</h5>
+          <ul>
+                    <li>    <a href="index.html">Home</a>
+    <a href="lifestyle.html">Lifestyle</a>
+    <a href="yoga.html">Yoga</a>
+    <a href="calisthenics.html">Calisthenics</a>
+    <a href="retreats.html">Retreats &amp; Programs</a>
+    <a href="flexibility.html">Flexibility</a>
+    <a href="reiki.html">Reiki</a>
+    <a href="calendar.html">Calendar</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h5>Connect</h5>
+          <ul>
+            <li><a href="mailto:hello@chiafreestyle.com">Email Chia</a></li>
+            <li><a href="calendar.html">Book a Session</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 Chia Freestyle. All rights reserved.</p>
+        <p>Made with passion &amp; salt water.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
